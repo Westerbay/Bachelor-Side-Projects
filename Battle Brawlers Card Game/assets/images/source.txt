@@ -1,2 +1,0 @@
-background: https://deep-fold.itch.io/space-background-generator
-crown: https://www.flaticon.com/

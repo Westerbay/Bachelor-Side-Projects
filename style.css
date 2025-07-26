@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+main > h2 {
+    font-size: xx-large;
+    text-align: center;
+    padding: 4em 0 2em 0;
+    font-family: 'Special Elite', 'Courier New', Courier, monospace;
+}
+
+main img {
+    max-width: 100%;
+}
+
+main .marge {
+    padding: 1em;
+}
+
+@media (min-width: 880px) {
+    main > h2::before,
+    main > h2::after {
+        content: '';
+        display: inline-block;
+        width: 20%;
+        height: 1px;
+        background: black;
+        vertical-align: middle;
+        margin: 0 1em;
+    }
+}
+@media (min-width: 1100px) {
+    main section {
+        display: grid;
+        align-items: center;
+        position: relative;
+    }
+
+    main section:nth-child(even) {
+        grid-template-columns: 4fr 5fr;
+    }
+
+    main section:nth-child(odd) {
+        grid-template-columns: 5fr 4fr;
+    }
+
+    main section:nth-child(even) article, 
+    main section:nth-child(odd) img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    main section:nth-child(odd) article,
+    main section:nth-child(even) img {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    main section p {
+        padding: 1em 2em;
+    }
+}
+@media (max-width: 1100px) {
+   main section p {
+        padding-bottom: 1em;
+    } 
+}
